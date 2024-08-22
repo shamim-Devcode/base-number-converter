@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.converter {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    max-width: 400px;
+    width: 90vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: 30px;
+    position: relative; /* Position relative to place error message correctly */
+}
+
+label {
+    color: #555;
+    font-weight: 600;
+    margin-right: 10px; /* Space between label and textarea */
+    width: 100px; /* Fixed width for labels */
+}
+
+textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    min-height: 40px; /* Default height similar to input box */
+    max-height: 100px; /* Adjusted to fit content */
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    flex: 1; /* Allow textarea to grow and fit available space */
+}
+
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #aaa;
+}
+
+.copy-btn {
+    margin-left: 10px;
+    padding: 15px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it absolutely to place it correctly */
+    left: 0; /* Align with the left of the input */
+    bottom: -20px; /* Place it below the input box */
+    width: 100%; /* Full width of the input group */
+}
+
+.clear-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+    background-color: #c82333;
+}
+
+.message {
+    color: #28a745;
+    font-size: 12px;
+    margin-top: 5px;
+}

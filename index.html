@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Converter</title>
+    <link href="minimul.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="converter">
+        <h2>Base Converter</h2>
+        <div class="input-group">
+            <label for="decimal">Decimal:</label>
+            <textarea id="decimal" placeholder="Enter decimal" oninput="validateAndConvert('decimal'); autoResize(this);"></textarea>
+            <button id="copy-btn" class="copy-btn" onclick="copyText('decimal')">Copy</button>
+            <div class="error-message" id="decimal-error">Invalid input</div>
+        </div>
+        <div class="input-group">
+            <label for="binary">Binary:</label>
+            <textarea id="binary" placeholder="Enter binary" oninput="validateAndConvert('binary'); autoResize(this);"></textarea>
+            <button id="copy-btn" class="copy-btn" onclick="copyText('binary')">Copy</button>
+            <div class="error-message" id="binary-error">Invalid input</div>
+        </div>
+        <div class="input-group">
+            <label for="octal">Octal:</label>
+            <textarea id="octal" placeholder="Enter octal" oninput="validateAndConvert('octal'); autoResize(this);"></textarea>
+            <button id="copy-btn" class="copy-btn" onclick="copyText('octal')">Copy</button>
+            <div class="error-message" id="octal-error">Invalid input</div>
+        </div>
+        <div class="input-group">
+            <label for="hexadecimal">Hexadecimal:</label>
+            <textarea id="hexadecimal" placeholder="Enter hexadecimal" oninput="validateAndConvert('hexadecimal'); autoResize(this);"></textarea>
+            <button id="copy-btn" class="copy-btn" onclick="copyText('hexadecimal')">Copy</button>
+            <div class="error-message" id="hexadecimal-error">Invalid input</div>
+        </div>
+        <button class="clear-btn" onclick="clearAll()">Clear All</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
